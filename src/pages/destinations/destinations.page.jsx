@@ -1,18 +1,14 @@
-import DestinationItems from "../../components/destination/destination.items";
+import CurrencyExchange from "../../components/CurrencyExchange";
 import MyMaps from "../../components/map/map";
+import Weather from "../../components/weather/weather";
 
-const Destination = () => {
- return (<>
-
-
- <DestinationItems />
-<MyMaps />
-
-
- 
- </>
-    
+const DestinationPage = () => {
+  return (
+    <>
+  <CurrencyExchange/>
+  <Weather/>
+      <MyMaps />
+    </>
   );
 };
-
-export default Destination;
+export default DestinationPage;

@@ -1,12 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "../pages/home/home.pages";
 import HomePageLayout from "../layout/homepage/homepage.layout";
-import DestinationPage from "../pages/destinations/destinations.page";
 import AboutPage from "../pages/about/about.page";
 import VlogPage from "../pages/vlog/vlog.page";
 import NotFoundPage from "../pages/Notfound/notfound.page";
 import DestinationArticle from "../components/destination/destination.article";
-
+import DestinationPage from "../pages/destinations/destinations.page";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +16,7 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       { path: "/destinations", 
-        element: <DestinationPage /> 
+        element:<DestinationPage/>
     },
     { path: "/vlogs", 
         element: <VlogPage /> 
