@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "../pages/home/home.pages";
 import HomePageLayout from "../layout/homepage/homepage.layout";
-import AboutPage from "../pages/about/about.page";
-import VlogPage from "../pages/vlog/vlog.page";
+
 import NotFoundPage from "../pages/Notfound/notfound.page";
-import DestinationArticle from "../components/destination/destination.article";
-import DestinationPage from "../pages/destinations/destinations.page";
+import DestinationsGrid from "../pages/destinations/destinations.page";
+import Tools from "../pages/Tools/tools";
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,24 +16,17 @@ const router = createBrowserRouter([
         index: true,
         element: <LandingPage />,
       },
-      { path: "/destinations", 
-        element:<DestinationPage/>
-    },
-    { path: "/vlogs", 
-        element: <VlogPage /> 
-    },
-    { path: "/about", 
-        element: <AboutPage /> 
-    },
-    {
-      path: "/article",
-      element: <DestinationArticle />,
-    },
-    {
+      { path: "/destinations",
+        element: <DestinationsGrid /> 
+      },
+      {
+        path: "/tools",
+        element: <Tools/>,
+      },
+      {
         path: "*",
-        element: <NotFoundPage/>,
-      }
-  
+        element: <NotFoundPage />,
+      },
     ],
   },
 ]);

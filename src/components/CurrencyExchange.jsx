@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 const CurrencyExchange = () => {
@@ -35,104 +35,132 @@ const CurrencyExchange = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Currency Exchange</h1>
-      <div style={styles.inputContainer}>
-        <input
-          type="number"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          style={styles.input}
-        />
-        <select
-          value={fromCurrency}
-          onChange={(e) => setFromCurrency(e.target.value)}
-          style={styles.select}
-        >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          <option value="JPY">JPY</option>
-          {/* Add more currencies as needed */}
-        </select>
-        <span style={styles.arrow}>&rarr;</span>
-        <select
-          value={toCurrency}
-          onChange={(e) => setToCurrency(e.target.value)}
-          style={styles.select}
-        >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          <option value="JPY">JPY</option>
-          {/* Add more currencies as needed */}
-        </select>
-        <button onClick={convertCurrency} style={styles.button}>
-          Convert
-        </button>
-      </div>
-      {convertedAmount && (
-        <div style={styles.result}>
-          <h2>
-            Converted Amount: {convertedAmount.toFixed(2)} {toCurrency}
-          </h2>
+      <div style={styles.card}>
+        <h1 style={styles.title}>Currency Exchange</h1>
+        <div style={styles.inputContainer}>
+          <input
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            style={styles.input}
+            placeholder="Amount"
+          />
+          <select
+            value={fromCurrency}
+            onChange={(e) => setFromCurrency(e.target.value)}
+            style={styles.select}
+          >
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            {/* Add more currencies as needed */}
+          </select>
+          <span style={styles.arrow}>&rarr;</span>
+          <select
+            value={toCurrency}
+            onChange={(e) => setToCurrency(e.target.value)}
+            style={styles.select}
+          >
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+            {/* Add more currencies as needed */}
+          </select>
+          <button onClick={convertCurrency} style={styles.button}>
+            Convert
+          </button>
         </div>
-      )}
-      {error && <p style={styles.error}>{error}</p>}
+        {convertedAmount && (
+          <div style={styles.result}>
+            <h2>
+              Converted Amount: {convertedAmount.toFixed(2)} {toCurrency}
+            </h2>
+          </div>
+        )}
+        {error && <p style={styles.error}>{error}</p>}
+      </div>
     </div>
   );
 };
 
 const styles = {
   container: {
-    textAlign: 'center',
-    padding: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
+    background: 'linear-gradient(135deg, #6a11cb, #2575fc)',
     fontFamily: 'Arial, sans-serif',
+    padding: '20px',
+  },
+  card: {
+    background: '#fff',
+    borderRadius: '15px',
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)',
+    padding: '30px',
+    maxWidth: '500px',
+    width: '100%',
+    textAlign: 'center',
   },
   title: {
     fontSize: '2rem',
     marginBottom: '20px',
+    color: '#333',
   },
   inputContainer: {
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '10px',
+    flexDirection: 'column',
+    gap: '15px',
     marginBottom: '20px',
   },
   input: {
-    padding: '10px',
+    padding: '12px',
     fontSize: '1rem',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
+    borderRadius: '8px',
+    border: '1px solid #ddd',
+    outline: 'none',
+    transition: 'border-color 0.3s ease',
+  },
+  inputFocus: {
+    borderColor: '#6a11cb',
   },
   select: {
-    padding: '10px',
+    padding: '12px',
     fontSize: '1rem',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
+    borderRadius: '8px',
+    border: '1px solid #ddd',
+    outline: 'none',
+    transition: 'border-color 0.3s ease',
+  },
+  selectFocus: {
+    borderColor: '#6a11cb',
   },
   arrow: {
     fontSize: '1.5rem',
     color: '#666',
   },
   button: {
-    padding: '10px 20px',
+    padding: '12px 20px',
     fontSize: '1rem',
-    borderRadius: '5px',
+    borderRadius: '8px',
     border: 'none',
-    backgroundColor: '#007bff',
+    background: 'linear-gradient(135deg, #6a11cb, #2575fc)',
     color: '#fff',
     cursor: 'pointer',
+    transition: 'background 0.3s ease',
   },
   buttonHover: {
-    backgroundColor: '#0056b3',
+    background: 'linear-gradient(135deg, #2575fc, #6a11cb)',
   },
   result: {
     marginTop: '20px',
     fontSize: '1.5rem',
+    color: '#333',
   },
   error: {
-    color: 'red',
+    color: '#ff4d4d',
     marginTop: '10px',
   },
 };

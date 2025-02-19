@@ -3,12 +3,12 @@ import HomeFeature from "../../components/homefeature/homefeature";
 import NewsLetter from "../../components/newsletter/newsletter";
 
 const LandingPage = () => {
-  return (<>
- <Hero />
- <HomeFeature />
- <NewsLetter />
-
-  </>
+  return (
+    <>
+      <Hero />
+      <HomeFeature />
+      <NewsLetter />
+    </>
   );
-}
+};
 export default LandingPage;

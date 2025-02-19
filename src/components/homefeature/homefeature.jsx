@@ -1,155 +1,100 @@
-import { Box, ImageList, ImageListItem, ListSubheader, IconButton, ImageListItemBar } from '@mui/material';
-import InfoIcon from '@mui/icons-material/Info';
-
 const HomeFeature = () => {
   return (
     <>
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-          <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Feature Destinations
-            </h2>
-            <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              Explore the whole collection of open-source web components and
-              elements built with the utility classNamees from Tailwind
-            </p>
-          </div>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <ImageList sx={{ width: 500, height: 450 }}>
-              <ImageListItem key="Subheader" cols={2}>
-                <ListSubheader component="div">December</ListSubheader>
-              </ImageListItem>
-              {itemData.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                  <ImageListItemBar
-                    title={item.title}
-                    subtitle={item.author}
-                    actionIcon={
-                      <IconButton
-                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                        aria-label={`info about ${item.title}`}
-                      >
-                        <InfoIcon />
-                      </IconButton>
-                    }
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-            
-            <ImageList sx={{ width: 500, height: 450 }}>
-              <ImageListItem key="Subheader" cols={2}>
-                <ListSubheader component="div">December</ListSubheader>
-              </ImageListItem>
-              {itemData.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                  <ImageListItemBar
-                    title={item.title}
-                    subtitle={item.author}
-                    actionIcon={
-                      <IconButton
-                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                        aria-label={`info about ${item.title}`}
-                      >
-                        <InfoIcon />
-                      </IconButton>
-                    }
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-          </Box>
+          <aside
+            aria-label="Related articles"
+            className="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800"
+          >
+            <div className="px-4 mx-auto max-w-screen-xl">
+              <h1 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
+                Featured Destinations
+              </h1>
+              <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                <article className="max-w-xs">
+                  <a href="#">
+                    <img
+                      src="/chitwan.jpg"
+                      className="mb-5 rounded-lg"
+                      alt="Image 1"
+                    />
+                  </a>
+                  <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first office</a>
+                  </h2>
+                  
+                  <a
+                    href="#"
+                    className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    Read in 2 minutes
+                  </a>
+                </article>
+                <article className="max-w-xs">
+                  <a href="#">
+                    <img
+                      src="/swayambhu.jpg"
+                      className="mb-5 rounded-lg"
+                      alt="Image 2"
+                    />
+                  </a>
+                  <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Enterprise design tips</a>
+                  </h2>
+                  
+                  <a
+                    href="#"
+                    className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    Read in 12 minutes
+                  </a>
+                </article>
+                <article className="max-w-xs">
+                  <a href="#">
+                    <img
+                      src="banner.jpg"
+                      className="mb-5 rounded-lg"
+                      alt="Image 3"
+                    />
+                  </a>
+                  <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">We partnered with Google</a>
+                  </h2>
+                 
+                  <a
+                    href="#"
+                    className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    Read in 8 minutes
+                  </a>
+                </article>
+                <article className="max-w-xs">
+                  <a href="#">
+                    <img
+                      src="boudha.jpg"
+                      className="mb-5 rounded-lg"
+                      alt="Image 4"
+                    />
+                  </a>
+                  <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first project with React</a>
+                  </h2>
+                  
+                  <a
+                    href="#"
+                    className="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    Read in 4 minutes
+                  </a>
+                </article>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
     </>
   );
 };
-
-const itemData = [
-  {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
-    author: '@rollelflex_graphy726',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
-    author: '@helloimnik',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-    author: '@nolanissac',
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-    author: '@katie_wasserman',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-    author: '@silverdalex',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-    author: '@peterlaster',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
-    author: '@southside_customs',
-    cols: 2,
-  },
-];
 
 export default HomeFeature;
