@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+// Import the leaflet-defaulticon-compatibility package for default icons
+import 'leaflet-defaulticon-compatibility';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
+
 const MyMaps = () => {
   const [userLocation, setUserLocation] = useState(null);
 
