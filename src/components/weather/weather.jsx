@@ -98,7 +98,7 @@ const WeatherBox = () => {
             {getWeatherIcon(weather.weather?.[0]?.description)}
           </div>
           <p className="text-xl text-gray-700">
-            <strong>Temperature:</strong> {weather.main?.temp}°C
+            <strong>Temperature:</strong> {weather.main?.temp}°F
           </p>
           <p className="text-xl text-gray-700">
             <strong>Description:</strong> {weather.weather?.[0]?.description}
