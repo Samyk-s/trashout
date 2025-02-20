@@ -4,7 +4,8 @@ import HomePageLayout from "../layout/homepage/homepage.layout";
 
 import NotFoundPage from "../pages/Notfound/notfound.page";
 import DestinationsGrid from "../pages/destinations/destinations.page";
-import Tools from "../pages/Tools/tools";
+import TravelTips from "../pages/TravelTips/Traveltips";
+
 
 
 const router = createBrowserRouter([
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
         element: <DestinationsGrid /> 
       },
       {
-        path: "/tools",
-        element: <Tools/>,
+        path: "TravelTips",
+        element:<TravelTips />
       },
       {
         path: "*",

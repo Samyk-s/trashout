@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@daniel-szulc/react-weather-widget": "^1.1.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.1",
@@ -23,6 +24,7 @@
     "flowbite-react": "^0.10.2",
     "flowbite-typography": "^1.0.5",
     "leaflet": "^1.9.4",
+    "mdb-react-ui-kit": "^9.0.0",
     "react": "^19.0.0-rc.1",
     "react-dom": "^19.0.0-rc.1",
     "react-leaflet": "^5.0.0-rc.2",
