@@ -2,13 +2,13 @@ const HomeFeature = () => {
   return (
     <>
       <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <div className=" px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
           <aside
             aria-label="Related articles"
             className="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800"
           >
-            <div className="px-4 mx-auto max-w-screen-xl">
-              <h1 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
+            <div className="mx-auto max-w-screen-xl">
+              <h1 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
                 Featured Destinations
               </h1>
               <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
