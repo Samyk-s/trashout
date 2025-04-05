@@ -54,7 +54,7 @@ const DestinationsGrid = () => {
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
             <img
-              src={destination.src}
+              src={destination.src}  // These images should now be served correctly from the /public folder
               alt={destination.alt}
               style={{
                 width: '100%',
