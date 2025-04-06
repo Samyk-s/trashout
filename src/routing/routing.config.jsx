@@ -5,9 +5,6 @@ import HomePageLayout from "../layout/homepage/homepage.layout";
 import NotFoundPage from "../pages/Notfound/notfound.page";
 import DestinationsGrid from "../pages/destinations/destinations.page";
 import TravelTips from "../pages/TravelTips/Traveltips";
-import Iteranry from "../components/Itenary/itenary";
-
-
 
 const router = createBrowserRouter([
   {
@@ -25,11 +22,7 @@ const router = createBrowserRouter([
         path: "TravelTips",
         element:<TravelTips />
       },
-      {
-        path: "Itenary",
-        element:<Iteranry />
-      },
-      {
+           {
         path: "*",
         element: <NotFoundPage />,
       },
