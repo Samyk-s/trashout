@@ -15,20 +15,19 @@ const router = createBrowserRouter([
         index: true,
         element: <LandingPage />,
       },
-      { path: "/destinations",
-        element: <DestinationsGrid /> 
+      { path: "/destinations", element: <DestinationsGrid /> },
+      {
+        path: "/traveltips",  // Fixed the path to be consistent and added leading slash
+        element: <TravelTips />,
       },
       {
-        path: "TravelTips",
-        element:<TravelTips />
-      },
-           {
         path: "*",
         element: <NotFoundPage />,
       },
     ],
   },
 ]);
+
 const Routing = () => {
   return (
     <>
@@ -36,4 +35,5 @@ const Routing = () => {
     </>
   );
 };
+
 export default Routing;

@@ -1,5 +1,4 @@
 import { Navbar } from "flowbite-react";
-
 import DayCard from "../Day/Day";
 
 const HomeHeader = () => {
@@ -30,10 +29,9 @@ const HomeHeader = () => {
           <Navbar.Link href="/destinations" className="text-sm sm:text-base">
             Destinations
           </Navbar.Link>
-          <Navbar.Link href="/TravelTips" className="text-sm sm:text-base">
+          <Navbar.Link href="/traveltips" className="text-sm sm:text-base">  {/* Fixed path */}
             Travel Tools
           </Navbar.Link>
-          
         </Navbar.Collapse>
       </Navbar>
     </>
