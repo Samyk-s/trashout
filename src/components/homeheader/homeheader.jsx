@@ -29,7 +29,7 @@ const HomeHeader = () => {
           <Navbar.Link href="/destinations" className="text-sm sm:text-base">
             Destinations
           </Navbar.Link>
-          <Navbar.Link href="/traveltips" className="text-sm sm:text-base">  {/* Fixed path */}
+          <Navbar.Link href="/traveltips" className="text-sm sm:text-base">
             Travel Tools
           </Navbar.Link>
         </Navbar.Collapse>

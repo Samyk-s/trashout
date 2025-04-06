@@ -39,9 +39,9 @@ const DestinationsGrid = () => {
         gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
         gap: '16px',
       }}>
-        {destinations.map((destination) => (
+        {destinations.map((destinations) => (
           <div
-            key={destination.id}
+            key={destinations.id}
             style={{
               position: 'relative',
               overflow: 'hidden',
@@ -54,8 +54,8 @@ const DestinationsGrid = () => {
             onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
             <img
-              src={destination.src}  // These images should now be served correctly from the /public folder
-              alt={destination.alt}
+              src={destinations.src}  
+              alt={destinations.alt}
               style={{
                 width: '100%',
                 height: '200px',
@@ -77,7 +77,7 @@ const DestinationsGrid = () => {
                 fontWeight: '500',
                 textAlign: 'center'
               }}>
-                {destination.alt}
+                {destinations.alt}
               </p>
             </div>
           </div>
