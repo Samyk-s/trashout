@@ -3,7 +3,7 @@ import LandingPage from "../pages/home/home.pages";
 import HomePageLayout from "../layout/homepage/homepage.layout";
 import TravelTips from "../pages/TravelTips/Traveltips";
 import NotFoundPage from "../pages/Notfound/notfound.page";
-import Hestin from "../pages/destinations/destin";
+import DestinationsGrid from "../pages/destinations/destinations.page";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       { path: "/destinations",
-         element: <Hestin />,
+         element: <DestinationsGrid />,
         },
       {
         path: "/traveltips",
