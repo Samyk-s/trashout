@@ -12,7 +12,7 @@ const HomeHeader = () => {
             alt="Flowbite React Logo"
           />
           <span className="self-center text-xl sm:text-2xl font-semibold dark:text-white">
-            Travel Vlog
+            Trashout
           </span>
         </Navbar.Brand>
 
@@ -30,7 +30,7 @@ const HomeHeader = () => {
             Destinations
           </Navbar.Link>
           <Navbar.Link href="/traveltips" className="text-sm sm:text-base">
-            Travel Tools
+            Tools
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
