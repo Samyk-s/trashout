@@ -3,7 +3,7 @@ import LandingPage from "../pages/home/home.pages";
 import HomePageLayout from "../layout/homepage/homepage.layout";
 import TravelTips from "../pages/TravelTips/Traveltips";
 import NotFoundPage from "../pages/Notfound/notfound.page";
-import DestinationsGrid from "../pages/destinations/destinations.page";
+import TrashDetect from "../pages/TrashDetect/TrashDetect";
 
 const router = createBrowserRouter([
   {
@@ -14,9 +14,10 @@ const router = createBrowserRouter([
         index: true,
         element: <LandingPage />,
       },
-      { path: "/destinations",
-         element: <DestinationsGrid />,
-        },
+      {
+        path: "/trash-detect", // 👈 NEW ROUTE
+        element: <TrashDetect />,
+      },
       {
         path: "/traveltips",
         element: <TravelTips />,

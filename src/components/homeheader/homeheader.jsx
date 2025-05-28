@@ -26,9 +26,10 @@ const HomeHeader = () => {
           <Navbar.Link href="/" className="text-sm sm:text-base">
             Home
           </Navbar.Link>
-          <Navbar.Link href="/destinations" className="text-sm sm:text-base">
-            Destinations
+          <Navbar.Link href="/trash-detect" className="text-sm sm:text-base">
+            Detect Trash
           </Navbar.Link>
+
           <Navbar.Link href="/traveltips" className="text-sm sm:text-base">
             Tools
           </Navbar.Link>
