@@ -1,14 +1,20 @@
+import { useRef } from "react";
 import Hero from "../../components/hero/hero.page";
 import NewsLetter from "../../components/newsletter/newsletter";
-import ServicesSection from "../../components/service/service";
+import TrashDetect from "../TrashDetect/TrashDetect";
 
 const LandingPage = () => {
+  const detectRef = useRef(null);
+
   return (
     <>
-      <Hero />
-      <ServicesSection />
+      <Hero scrollToDetect={() => detectRef.current?.scrollIntoView({ behavior: "smooth" })} />
+      <div ref={detectRef}>
+        <TrashDetect />
+      </div>
       <NewsLetter />
     </>
   );
 };
+
 export default LandingPage;

@@ -14,7 +14,7 @@ const DayCard = () => {
 
   return (
     <div className="flex items-center justify-center p-3 shadow-lg h-10 rounded-lg">
-      <h1 className="text-lg font-semibold text-gray-500">{day}</h1>
+      <h1 className="text-lg font-semibold text-white">{day}</h1>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import HomePageLayout from "../layout/homepage/homepage.layout";
 import TravelTips from "../pages/TravelTips/Traveltips";
 import NotFoundPage from "../pages/Notfound/notfound.page";
 import TrashDetect from "../pages/TrashDetect/TrashDetect";
+import AboutUs from "../pages/About/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,8 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/trash-detect", // 👈 NEW ROUTE
-        element: <TrashDetect />,
+        path: "/about", // 👈 NEW ROUTE
+        element: <AboutUs />,
       },
       {
         path: "/traveltips",
